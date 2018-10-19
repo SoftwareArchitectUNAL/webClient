@@ -1,39 +1,44 @@
-import React, { Component } from 'react';
-import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "react-apollo";
-import Courses from '../components/Courses';
+import React, { Component } from 'react'
+import Map from '../components/Map'
 
 
-const client = new ApolloClient({
-  uri: 'https://vm8mjvrnv3.lp.gql.zone/graphql'
-});
+class mapi extends Component {
 
-
-export default class ComponentPageMap extends Component {
-  constructor(){
-    super(); // que herede la funcionalidad de react
-
+  state = {
+  
+    query: '',
+    id: 0,
+    points: [],
+    modalVisible: false,
+    typeModal: 0,
+    center: {
+      lat: 4.64,
+      lng: -74.1
+    },
+    zoom: 11.7,
+    location: false
   }
+
+
+
+
   render(){
+    const currentState = this.state.machine_state
+    console.log("STATE:", currentState)
+    console.log(this.state.center);
+    return(
 
-    return (
-      <div className="App">
+      <header className="masthead bg-info text-black text-center">
 
-          <header className="masthead bg-info text-black text-center">            
-              <ApolloProvider client={client}>
-                <div className="container">
-                  <nav className="navbar navbar-dark bg-primary">
-                    <a className="navbar-brand" href="#">React and GraphQL - Sample Application</a>
-                  </nav>
-                  <div>
-                    <Courses />
-                  </div>
-                </div>
-              </ApolloProvider>
+            <Map
+              zoom={this.state.zoom}
+              center={this.state.center}
+              points={this.state.points}
+            />
 
-
-          </header>
-      </div>
-    );
+    </header>
+    )
   }
 }
+
+export default mapi

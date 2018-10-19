@@ -2,15 +2,6 @@ body {
   font-family: 'Lato';
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: 700;
-
-}
 
 
 section {
@@ -130,8 +121,8 @@ header.masthead {
   padding-top: calc(6rem + 72px);
   padding-bottom: 6rem;
   background: #ADA996;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: -webkit-linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #EAEAEA, #DBDBDB, #F2F2F2, #ADA996); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
 
@@ -149,6 +140,7 @@ header.masthead h2 {
   header.masthead {
     padding-top: calc(6rem + 106px);
     padding-bottom: 6rem;
+
   }
   header.masthead h1 {
     font-size: 4.75em;
