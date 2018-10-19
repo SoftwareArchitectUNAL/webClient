@@ -5,6 +5,7 @@ import Footer from './Footer';
 import PageHome from '../pages/PageHome';
 import PageGraph from '../pages/PageGraph';
 import PageDenounce   from '../pages/PageDenounce';
+import PageLivingcost from '../pages/PageLivingcost';
 
 
 
@@ -16,6 +17,7 @@ class App extends Component {
                 <Route path="/" exact component={PageHome} />
                 <Route path="/map" component={PageGraph} />
                 <Route path="/denounce" component={PageDenounce} />
+                <Route path="/livingcost" component={PageLivingcost} />
 
                 <Footer />
             </div>
