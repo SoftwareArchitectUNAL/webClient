@@ -22,7 +22,7 @@ class CostLocality extends Component {
       <Query query={getByLocality} variables={{locality}}>
         {({loading, error, data}) => {
           if(loading) return "Loading..."
-          if(error) return "Error D:"
+          if(error) return <h2 className="mt-5">No hay datos para esta localidad</h2>
           console.log("locality", data.livingcostByLocality)
           const a = data.livingcostByLocality.map((liv,i) =>{
               return(

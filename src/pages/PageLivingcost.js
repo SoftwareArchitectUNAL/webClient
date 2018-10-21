@@ -32,7 +32,7 @@ class Livingcost extends Component {
                     <ApolloProvider client={client}>
                       <div className="container">
                         <nav className="navbar navbar-dark bg-primary">
-                          <h3 className="navbar-brand m-auto text-white col-md-8" >Costo de vida por zonas de Bogota</h3>
+                          <h2 className="navbar-brand m-auto text-white col-md-8" >COSTO DE VIDA POR ZONAS</h2>
                           <div className=" float-right col-md-3">
                             <div className="form-group container">
                               <label htmlFor="select1" className = "text-white" > Filtrar por Localidad </label>

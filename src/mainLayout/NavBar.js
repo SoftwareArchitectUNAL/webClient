@@ -31,6 +31,7 @@ class LinksCollapse extends Component {
       renderDenounce: !props.isAuthenticated,
       renderLivingcost: !props.isAuthenticated,
       renderLogout: props.isAuthenticated,
+      renderViolence:  !props.isAuthenticated
 
     }
   }
@@ -42,10 +43,13 @@ class LinksCollapse extends Component {
         <ul className="navbar-nav ml-auto">
 
           <li className="nav-item mx-0 mx-lg-1">
-            <NavBarLink render={this.state.renderMap} className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" value="mapa" to="/map" />
+            <NavBarLink render={this.state.renderMap} className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" value="mapa de riesgos" to="/map" />
           </li>
           <li className="nav-item mx-0 mx-lg-1">
             <NavBarLink render={this.state.renderDenounce} className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" value="denunciar" to="/denounce" />
+          </li>
+          <li className="nav-item mx-0 mx-lg-1">
+            <NavBarLink render={this.state.renderViolence} className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" value="violencia" to="/violence" />
           </li>
           <li className="nav-item mx-0 mx-lg-1">
             <NavBarLink render={this.state.renderLivingcost} className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" value="costo de vida" to="/livingcost" />
