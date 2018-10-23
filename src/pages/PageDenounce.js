@@ -9,33 +9,27 @@ const client = new ApolloClient({
   uri: 'http://35.196.218.73:5000/graphql'
 });
 
-const Denounce = () => (
-  <Query
-    query={gql`
-      query {
-  allCrimes {
-    _id
-    date
-    state
-    day
-    age
-    mobility_victim
-    mobility_agresor
+
+
+class Deno extends Component {
+
+      render() {
+
+      return (
+        <div className="App">
+                <header className="masthead bg-info text-black text-center">
+                    <ApolloProvider client={client}>
+                      <div className="container">
+
+                        <Crime/>
+
+                      </div>
+                    </ApolloProvider>
+
+                </header>
+            </div>
+      );
   }
-}`
-    }
-  >
-  {({ loading, error, data }) => {
-     if (loading) return <p>Loading...</p>;
-     if (error) return <p>Error :(</p>;
+}
 
-     return data.allCrimes.map(({ _id, date, state }) => (
-       <div key={_id}>
-         <p>{`${_id} ${date}: ${state}`}</p>
-       </div>
-     ));
-   }}
- </Query>
-);
-
-export default Denounce;
+export default Deno;
