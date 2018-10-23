@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import Crime from '../components/Crimes';
 import ApolloClient from "apollo-boost";
-import { ApolloProvider } from "react-apollo";
+import { ApolloProvider, Query } from "react-apollo";
+import gpl from 'graphql-tag';
 
 
 const client = new ApolloClient({
