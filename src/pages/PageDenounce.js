@@ -1,24 +1,40 @@
 import React, { Component } from 'react';
+import Crime from '../components/Crimes';
+import ApolloClient from "apollo-boost";
+import { ApolloProvider } from "react-apollo";
 
 
-class Denounce extends Component {
+const client = new ApolloClient({
+  uri: 'http://35.196.218.73:5000/graphql'
+});
 
-
-  render() {
-
-    return (
-      <div className="App">
-
-          <header className="masthead bg-info text-black">
-
-            <div className="col-md-12 text-center">
-              <p>hola culpable, lo tenemos en la mira</p>
-            </div>
-
-          </header>
-      </div>
-    );
+const Denounce = () => (
+  <Query
+    query={gql`
+      query {
+  allCrimes {
+    _id
+    date
+    state
+    day
+    age
+    mobility_victim
+    mobility_agresor
   }
-}
+}`
+    }
+  >
+  {({ loading, error, data }) => {
+     if (loading) return <p>Loading...</p>;
+     if (error) return <p>Error :(</p>;
+
+     return data.allCrimes.map(({ _id, date, state }) => (
+       <div key={_id}>
+         <p>{`${_id} ${date}: ${state}`}</p>
+       </div>
+     ));
+   }}
+ </Query>
+);
 
 export default Denounce;
