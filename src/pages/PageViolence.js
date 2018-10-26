@@ -8,7 +8,7 @@ import { ApolloProvider } from "react-apollo";
 
 
 const client = new ApolloClient({
-  uri: 'http://35.204.18.87:5000/graphql'
+  uri: 'http://35.231.194.73:5000/graphql'
 });
 
 
@@ -30,15 +30,18 @@ class Violence extends Component {
 
       return (
         <div className="App">
-                <header className="masthead bg-info text-black text-center">
+                <header className="masthead bg-info text-black text-center" style={{ "paddingTop": "calc(5rem + 50px)" }}>
                     <ApolloProvider client={client}>
                       <div className="container">
-                        <nav className="navbar navbar-dark bg-primary text-white  " >
-                          <h2 className="navbar-brand m-auto col-md-2" >TIPO DE VIOLENCIA</h2>
+                        <nav className="navbar navbar-white   " >
+                          <h2 className="navbar-brand m-auto col-md-12" >TIPO DE VIOLENCIA</h2>
+                          <br/>
+                          <div className ="container col-md-5">
                           <div className="form-check form-check-inline">
                               <input onChange={this.onChange.bind(this)} className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="murders"/>
                               <label className="form-check-label" >ASESINATOS</label>
-                            </div>
+                          </div>
+
                             <div className="form-check form-check-inline">
                               <input onChange={this.onChange.bind(this)} className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="intrafamilies"/>
                               <label className="form-check-label" >INTRAFAMILIAR</label>
@@ -47,11 +50,12 @@ class Violence extends Component {
                               <input onChange={this.onChange.bind(this)}  className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="genders" />
                               <label className="form-check-label" >GENERO </label>
                             </div>
+                            </div>
                         </nav>
                         {console.log(this.state.value)}
-                        {this.state.value=="murders" &&   <Murder /> }
-                        {this.state.value=="intrafamilies" &&   <Intraf /> }
-                        {this.state.value=="genders" &&   <Gender /> }
+                        {this.state.value==="murders" &&   <Murder /> }
+                        {this.state.value==="intrafamilies" &&   <Intraf /> }
+                        {this.state.value==="genders" &&   <Gender /> }
 
 
                       </div>
