@@ -30,7 +30,7 @@ class Violence extends Component {
 
       return (
         <div className="App">
-                <header className="masthead bg-info text-black text-center" style={{ "paddingTop": "calc(5rem + 50px)" }}>
+                <header className="masthead bg-info text-black text-center" style={{"paddingTop": "calc(5rem + 51px)" }}>
                     <ApolloProvider client={client}>
                       <div className="container">
                         <nav className="navbar navbar-white   " >
