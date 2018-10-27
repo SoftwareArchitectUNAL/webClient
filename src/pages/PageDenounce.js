@@ -30,34 +30,39 @@ class Denounce extends Component {
 
       return (
         <div className="App">
-                <header className="masthead bg-info text-black text-center"  style={{ "paddingTop": "calc(4rem + 50px)" }}>
+                <header className="masthead bg-info text-black text-center"  style={{ "paddingTop": "calc(4rem + 60px)" }}>
                     <ApolloProvider client={client}>
 
-                      <section id="contact" style={{ "paddingTop": "calc(1rem + 20px)" }}>
+                      <div className="container mb-5 mt-4" >
+                          <nav className="navbar navbar-white " >
+                            <h2 className="text-center text-uppercase text-secondary mb-0 m-auto">Denuncia por hurto</h2>
+                          </nav>
+                    </div>
+
+                    <div className="container mb-4">
+                      <div className=" btn-group-vertical">
+                        <button onClick={ this.onChange.bind(this) } type="button" className="btn btn-primary btn-sm" value="show">Denunciar</button>
+                        <button onClick={ this.onChange.bind(this)} type="button" className="btn btn-secondary btn-sm mt-2"  value ="denounce" >ver casos de denuncias</button>
+                      </div>
+
+                    </div>
 
 
-                        <div className="container">
-                          <h2 className="text-center text-uppercase text-secondary mb-0">Denuncia por hurto</h2>
-                          <hr className="star-dark mb-5" />
-                            <div className="float-left col-md-3 btn-group-vertical">
-                              <button onClick={ this.onChange.bind(this) } type="button" className="btn btn-primary btn-sm" value="show">Denunciar</button>
-                              <button onClick={ this.onChange.bind(this)} type="button" className="btn btn-secondary btn-sm mt-2"  value ="denounce" >ver casos de denuncias</button>
+                    <div className="container col-lg-8 mx-auto">
+                      {this.state.value==="show" &&
+                          <div className="row  ">
+                            <div className="mx-auto">
+                               <Cri/>
                             </div>
+                          </div> }
 
-                          {this.state.value==="show" &&
-                              <div className="row">
-                                <div className="col-md-8 mx-auto">
-                                   <Cri/>
-                                </div>
-                              </div> }
+                      {this.state.value==="denounce" &&
+                        <div className="  mx-auto">
+                            <Crime/>
+                          </div> }
 
-                          {this.state.value==="denounce" &&
-                            <div className="row col-md-10 mx-auto">
-                                <Crime/>
-                              </div> }
+                    </div>
 
-                        </div>
-                      </section>
 
 
                     </ApolloProvider>

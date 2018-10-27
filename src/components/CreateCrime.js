@@ -76,7 +76,7 @@ class DenounceMutation extends Component {
         {
           createCrime => (
             <div>
-              <form
+              <form 
                 onSubmit={e => {
                   e.preventDefault()
                   createCrime({
@@ -102,6 +102,11 @@ class DenounceMutation extends Component {
                       scholarship:  ""
                     }
                   })
+
+
+
+
+
                   i_name.value=""
                   i_lastname.value=""
                   i_ni.value=""
@@ -127,18 +132,18 @@ class DenounceMutation extends Component {
                 <input
                 className="form-control-campaign"
                 placeholder="identificacion"
-                ref={  ni => {i_ni = ni}}  />
+                ref={  ni => {i_ni = ni}} required />
 
-                <input
+              <input
                 className="form-control-campaign"
                 placeholder="nombre"
-                ref={  name => {i_name = name}}  />
+                ref={  name => {i_name = name}} required/>
 
 
                 <input
                 className="form-control-campaign"
                 placeholder="apellidos"
-                ref={  lastname => {i_lastname = lastname}}  />
+                ref={  lastname => {i_lastname = lastname}}  required/>
 
                 <input
                 className="form-control-campaign"
@@ -158,17 +163,17 @@ class DenounceMutation extends Component {
                 <input
                 className="form-control-campaign"
                 placeholder="fecha del hurto dia/mes/año"
-                ref={  date => {i_date = date}}  />
+                ref={  date => {i_date = date}} required />
 
                 <input
                 className="form-control-campaign"
                 placeholder="hora del hurto 00:00"
-                ref={  hour => {i_hour = hour}}  />
+                ref={  hour => {i_hour = hour}}required  />
 
                 <input
                 className="form-control-campaign"
                 placeholder="localidad del hurto"
-                ref={  neighbourhood => {i_neighbourhood = neighbourhood}}  />
+                ref={  neighbourhood => {i_neighbourhood = neighbourhood}} required />
 
 
                 <input  className="form-control-campaign"
@@ -179,26 +184,26 @@ class DenounceMutation extends Component {
 
                 <input  className="form-control-campaign"
                 placeholder="arma usada"
-                ref={  weapon_used => {i_weapon_used = weapon_used}}  />
+                ref={  weapon_used => {i_weapon_used = weapon_used}} required />
 
 
                 <input  className="form-control-campaign"
                 placeholder="movilidad del agresor"
-                ref={  mobility_agresor => {i_mobility_agresor = mobility_agresor}}  />
+                ref={  mobility_agresor => {i_mobility_agresor = mobility_agresor}} required />
 
                 <input  className="form-control-campaign"
                 placeholder="movilidad de la victima"
                 ref={  mobility_victim => {i_mobility_victim = mobility_victim}}  />
 
                 <input  className="form-control-campaign"
+                  maxlength="400"
                 placeholder="descripcion del hecho"
-                ref={  description => {i_description= description}}  />
+                ref={  description => {i_description= description}} required />
 
               <br/>
               <div>
                 <button type="submit"> Denunciar  </button>
               </div>
-
               </form>
             </div>
           )
