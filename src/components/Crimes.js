@@ -10,6 +10,9 @@ const getCrimes = gql`
     date
     state
     day
+    hour
+    zone
+    neighbourhood
     mobility_victim
     mobility_agresor
   }
@@ -26,25 +29,26 @@ const Crime = () => (
         console.log("holaaaa", data.allCrimes)
       const a = data.allCrimes.map((cri,i) =>{
           return(
-            <div className="col-md-3">
+            <div className="col-md-12">
               <div className="card mt-5">
                 <div className="card-header">
-                  <h4>{cri.date}</h4>
-                  <span> dia: {cri.day}</span>
+                  <h4>Fecha del hurto {cri.date}</h4>
+                  <h5>hora {cri.hour}</h5>
 
-                  <p><mark>{cri.state}</mark></p>
+                  <p>Estado <mark>{cri.state}</mark></p>
+                  <p><mark>Barrio {cri.neighbourhood}</mark></p>
                 </div>
                 <div className="card-body">
-                  <p>{cri.mobility_victim}</p>
-                  <p>{cri.mobility_agresor}</p>
+                  <p>la movilidad del agresor era :  {cri.mobility_agresor}</p>
+                  <p>la movilidad de la victima era: {cri.mobility_victim}</p>
+
                 </div>
               </div>
             </div>
           )
         })
       return (
-
-        <div className="row mt-4">
+          <div className="row mt-4">
             {a}
         </div>
 
