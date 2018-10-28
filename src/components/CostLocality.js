@@ -10,7 +10,6 @@ const getByLocality= gql`
       stratification
       costm2
       costbasketgoods
-
     }
   }
 `

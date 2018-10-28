@@ -123,7 +123,7 @@ class Mapa extends Component {
     render() {
 
         return (
-            <svg viewBox="0 0 800 800" width="30%" height="30%">
+            <svg viewBox="0 0 800 800" width="80%" height="80%" >
 
             </svg>
         )
