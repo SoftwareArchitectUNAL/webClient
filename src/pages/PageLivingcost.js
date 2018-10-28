@@ -29,11 +29,11 @@ class Livingcost extends Component {
 
       return (
         <div className="App">
-                <header className="masthead bg-info text-black text-center" style={{ "paddingTop": "calc(4rem + 50px)" }}>
+                <header className="masthead bg-info text-black text-center" style={{ "paddingTop": "calc(6rem + 50px)" }}>
                     <ApolloProvider client={client}>
                       <div className="container" >
                         <nav className="navbar navbar-white " >
-                          <h2 className="navbar-brand m-auto text-black col-md-8" >COSTO DE VIDA POR ZONAS</h2>
+                          <h2 className="text-center text-uppercase text-secondary mb-0 m-auto col-md-8" >COSTO DE VIDA POR ZONAS</h2>
                           <div className=" float-right col-md-3">
                             <div className="form-group container">
                               <label htmlFor="select1" className = "text-black" > Filtrar por Localidad </label>

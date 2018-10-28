@@ -46,7 +46,7 @@ class Denounce extends Component {
                     </div>
 
 
-                    <div className="container col-lg-8 mx-auto">
+                    <div className="container col-md-4 mx-auto">
                       {this.state.value==="show" &&
                           <div className="row  ">
                             <div className="mx-auto">

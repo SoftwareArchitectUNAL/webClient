@@ -17,7 +17,7 @@ class Violence extends Component {
 
   constructor() {
         super();
-        this.state = { value: "intrafamilies"  }
+        this.state = { value: ""  }
     }
     onChange(e) {
       this.setState({ value: e.target.value });
@@ -30,28 +30,30 @@ class Violence extends Component {
 
       return (
         <div className="App">
-                <header className="masthead bg-info text-black text-center" style={{"paddingTop": "calc(5rem + 51px)" }}>
+                <header className="masthead bg-info text-black text-center" style={{"paddingTop": "calc(7rem + 51px)" }}>
                     <ApolloProvider client={client}>
-                      <div className="container">
+                      <div className="container  m-auto">
                         <nav className="navbar navbar-white   " >
-                          <h2 className="navbar-brand m-auto col-md-12" >TIPO DE VIOLENCIA</h2>
-                          <br/>
-                          <div className ="container col-md-5">
-                          <div className="form-check form-check-inline">
-                              <input onChange={this.onChange.bind(this)} className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="murders"/>
-                              <label className="form-check-label" >ASESINATOS</label>
+                          <div className=" col-md-12">
+                                <h2 className="text-center text-uppercase text-secondary  m-auto " >TIPO DE VIOLENCIA</h2>
                           </div>
-
-                            <div className="form-check form-check-inline">
-                              <input onChange={this.onChange.bind(this)} className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="intrafamilies"/>
-                              <label className="form-check-label" >INTRAFAMILIAR</label>
-                            </div>
-                            <div className="form-check form-check-inline">
-                              <input onChange={this.onChange.bind(this)}  className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="genders" />
-                              <label className="form-check-label" >GENERO </label>
-                            </div>
-                            </div>
                         </nav>
+
+                        <div className ="container col-md-5  "style={{"paddingTop": "calc( 2rem)" }} >
+                              <div className="form-check form-check-inline" >
+                                  <input onChange={this.onChange.bind(this)} className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="murders"/>
+                                  <label className="form-check-label" >ASESINATOS</label>
+                              </div>
+
+                                <div className="form-check form-check-inline">
+                                  <input onChange={this.onChange.bind(this)} className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="intrafamilies"/>
+                                  <label className="form-check-label" >INTRAFAMILIAR</label>
+                                </div>
+                                <div className="form-check form-check-inline">
+                                  <input onChange={this.onChange.bind(this)}  className="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="genders" />
+                                  <label className="form-check-label" >GENERO </label>
+                                </div>
+                          </div>
                         {console.log(this.state.value)}
                         {this.state.value==="murders" &&   <Murder /> }
                         {this.state.value==="intrafamilies" &&   <Intraf /> }
