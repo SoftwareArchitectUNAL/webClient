@@ -7,7 +7,8 @@ import { ApolloProvider } from "react-apollo";
 
 
 const client = new ApolloClient({
-  uri: 'http://35.196.108.151:5000/graphql'
+
+ uri: 'http://35.231.194.73:5000/graphql'
 });
 
 
@@ -28,14 +29,14 @@ class Livingcost extends Component {
 
       return (
         <div className="App">
-                <header className="masthead bg-info text-black text-center">
+                <header className="masthead bg-info text-black text-center" style={{ "paddingTop": "calc(6rem + 50px)" }}>
                     <ApolloProvider client={client}>
-                      <div className="container">
-                        <nav className="navbar navbar-dark bg-primary">
-                          <h2 className="navbar-brand m-auto text-white col-md-8" >COSTO DE VIDA POR ZONAS</h2>
+                      <div className="container" >
+                        <nav className="navbar navbar-white " >
+                          <h2 className="text-center text-uppercase text-secondary mb-0 m-auto col-md-8" >COSTO DE VIDA POR ZONAS</h2>
                           <div className=" float-right col-md-3">
                             <div className="form-group container">
-                              <label htmlFor="select1" className = "text-white" > Filtrar por Localidad </label>
+                              <label htmlFor="select1" className = "text-black" > Filtrar por Localidad </label>
                               <select value={this.state.value}  onChange={this.onChange.bind(this)} className="form-control">
                                 <option value="all">Todas</option>
                                 <option value="Usaquen">Usaquen</option>
@@ -62,8 +63,8 @@ class Livingcost extends Component {
                             </div>
                           </div>
                         </nav>
-                        {this.state.value=="all" &&   <Cost /> }
-                        {this.state.value!="all" &&  <CostLocal local={this.state.value}/>  }
+                        {this.state.value==="all" &&   <Cost /> }
+                        {this.state.value!=="all" &&  <CostLocal local={this.state.value}/>  }
 
                       </div>
                     </ApolloProvider>
