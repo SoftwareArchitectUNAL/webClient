@@ -1,11 +1,13 @@
 import React, { Component } from 'react'
 import Map from '../components/Map'
+import Mapa from '../components/Mapa';
+
 
 
 class mapi extends Component {
 
   state = {
-  
+
     query: '',
     id: 0,
     points: [],
@@ -35,6 +37,9 @@ class mapi extends Component {
               center={this.state.center}
               points={this.state.points}
             />
+
+          <Mapa />
+
 
     </header>
     )

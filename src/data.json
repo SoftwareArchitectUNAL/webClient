@@ -1,0 +1,17 @@
+{
+    "allScore": [
+      {
+        "locality": "Bosa",
+        "score": "10"
+      },
+      {
+        "locality": "Kennedy",
+        "score": "50"
+      },
+      {
+        "locality": "Usme",
+        "score": "8000"
+      }
+    ]
+
+}
