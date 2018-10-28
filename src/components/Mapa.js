@@ -20,7 +20,7 @@ class Mapa extends Component {
         let arr =[]
         let scoLoc = []
 
-        const a = this.state.allScore.map((sco,i) =>{
+        this.state.allScore.map((sco,i) =>{
 
           arr.push(sco.locality)
           arr.push(sco.score)
@@ -28,9 +28,6 @@ class Mapa extends Component {
           arr=[]
           console.log(sco.locality)
         })
-
-
-        let votLoc = [["Bosa","8000"],["Usme", "50"]];
 
         return scoLoc;
     }
@@ -71,44 +68,26 @@ class Mapa extends Component {
 
                             if (parseInt(element[1], 10) === 0) {
                                 return value;
-                            } else if (parseInt(element[1], 10) <= 25) {
-                                return value = 'rgb(255, 0, 0)';
-                            } else if (parseInt(element[1], 10) <= 50) {
-                                return value = 'rgb(255, 66, 66)';
-                            } else if (parseInt(element[1], 10) <= 75) {
-                                return value = 'rgb(222, 222, 254)';
-                            } else if (parseInt(element[1], 10) <= 100) {
-                                return value = 'rgb(211, 211, 253)';
+                              } else if (parseInt(element[1], 10) <= 100) {
+                                return value = 'rgb(52, 78, 184)';
                             } else if (parseInt(element[1], 10) <= 200) {
-                                return value = 'rgb(200,200,253)';
+                                return value = 'rgb(55, 82, 192)';
                             } else if (parseInt(element[1], 10) <= 300) {
-                                return value = 'rgb(189,189,252)';
+                                return value = 'rgb(74, 98, 193)';
                             } else if (parseInt(element[1], 10) <= 400) {
-                                return value = 'rgb(178,178,252)';
+                                return value = 'rgb(97, 116, 196)';
                             } else if (parseInt(element[1], 10) <= 500) {
-                                return value = 'rgb(167,167,251)';
+                                return value = 'rgb(120, 136, 202)';
                             } else if (parseInt(element[1], 10) <= 600) {
-                                return value = 'rgb(156,156,251)';
+                                return value = 'rgb(142, 154, 205)';
                             } else if (parseInt(element[1], 10) <= 700) {
-                                return value = 'rgb(145,145,250)';
+                                return value = 'rgb(169, 177, 209)';
                             } else if (parseInt(element[1], 10) <= 800) {
-                                return value = 'rgb(134,134,250)';
+                                return value = 'rgb(197, 200, 212)';
                             } else if (parseInt(element[1], 10) <= 900) {
-                                return value = 'rgb(123,123,249)';
+                                return value = 'rgb(223, 230, 255)';
                             } else if (parseInt(element[1], 10) <= 1000) {
-                                return value = 'rgb(250,20,20)';
-                            } else if (parseInt(element[1], 10) <= 2000) {
-                                return value = 'rgb(250,40,60)';
-                            } else if (parseInt(element[1], 10) <= 3000) {
-                                return value = 'rgb(90,90,248)';
-                            } else if (parseInt(element[1], 10) <= 4000) {
-                                return value = 'rgb(79,79,247)';
-                            } else if (parseInt(element[1], 10) <= 5000) {
-                                return value = 'rgb(68,68,247)';
-                            } else if (parseInt(element[1], 10) <= 6000) {
-                                return value = 'rgb(39,39,246)';
-                            } else if (parseInt(element[1], 10) <= 8000) {
-                                return value = 'rgb(255, 214, 30 )';
+                                return value = 'rgb(225, 226, 229)';
                             }
 
                         }
@@ -144,7 +123,7 @@ class Mapa extends Component {
     render() {
 
         return (
-            <svg viewBox="0 0 800 800" width="100%" height="100%">
+            <svg viewBox="0 0 800 800" width="30%" height="30%">
 
             </svg>
         )

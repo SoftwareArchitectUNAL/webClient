@@ -3,9 +3,6 @@ import Crime from '../components/Crimes';
 import Cri from '../components/CreateCrime';
 import ApolloClient from "apollo-boost";
 import { ApolloProvider} from "react-apollo";
-import gql from 'graphql-tag';
-
-
 
 
 const client = new ApolloClient({

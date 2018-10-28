@@ -30,7 +30,19 @@ class mapi extends Component {
     console.log(this.state.center);
     return(
 
-      <header className="masthead bg-info text-black text-center">
+      <header className="masthead bg-info text-black text-center" style={{ "paddingTop": "calc(4rem + 60px)" }}>
+
+
+        <div className="container mb-5 mt-4" >
+            <nav className="navbar navbar-white " >
+              <h2 className="text-center text-uppercase text-secondary mb-0 m-auto">Mapa de Riesgos</h2>
+            </nav>
+      </div>
+
+      <div>
+        <p>Las localidades con más riesgos estarán identificadas con colores mas intensos hasta las menos riesgosas de colores mas claros</p>
+            <Mapa />
+      </div>
 
             <Map
               zoom={this.state.zoom}
@@ -38,7 +50,6 @@ class mapi extends Component {
               points={this.state.points}
             />
 
-          <Mapa />
 
 
     </header>
