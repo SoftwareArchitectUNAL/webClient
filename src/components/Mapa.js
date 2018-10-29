@@ -98,6 +98,7 @@ class Mapa extends Component {
             .attr("class", "tract")
             .attr("d", path)
             .append("title")
+
             .text(
                 (d) => {
                     let text;
@@ -110,6 +111,8 @@ class Mapa extends Component {
                     return text;
                 }
             );
+
+
 
         svg.selectAll(".tract-border")
             .data(localidades.features)

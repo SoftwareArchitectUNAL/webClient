@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import Map from '../components/Map'
 import Mapa from '../components/Mapa';
+import Table from '../components/Tabledata';
+
 
 
 
@@ -42,9 +44,16 @@ class mapi extends Component {
       <div>
         <p>Las localidades con más riesgos estarán identificadas con colores mas intensos hasta las menos riesgosas de colores mas claros</p>
         <div className="row" >
-          <div className="container col-md-8 mt-4" >
+
+          <div className="container col-md-6 mr-0 ml-15"   >
             <Mapa />
           </div>
+
+
+          <div className="container col-md-3 ml-0 "  >
+              <Table/>
+          </div>
+
 
         </div>
       </div>

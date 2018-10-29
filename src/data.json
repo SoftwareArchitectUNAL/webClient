@@ -2,82 +2,82 @@
     "allScore": [
       {
         "locality": "Bosa",
-        "score": "590"
+        "score": 590
       },
       {
         "locality": "Kennedy",
-        "score": "725"
+        "score": 725
       },
       {
         "locality": "Usme",
-        "score": "515"
+        "score": 515
       },
       {
         "locality": "Rafael Uribe Uribe",
-        "score": "695"
+        "score": 695
       },
       {
         "locality": "Engativá",
-        "score": "300"
+        "score": 300
       },
       {
         "locality": "Los Mártires",
-        "score": "400"
+        "score": 400
       },
       {
         "locality": "Teusaquillo",
-        "score": "1000"
+        "score": 1000
       },
 
       {
         "locality": "Usaquén",
-        "score": "825"
+        "score": 825
       },
       {
         "locality": "Barrios Unidos",
-        "score": "265"
+        "score": 265
       },
       {
         "locality": "Santa Fe",
-        "score": "100"
+        "score": 100
       },
       {
         "locality": "Fontibón",
-        "score": "500"
+        "score": 500
       },
 
       {
         "locality": "Chapinero",
-        "score": "970"
+        "score": 970
       },
       {
         "locality": "Tunjuelito",
-        "score": "300"
+        "score": 300
       },
       {
         "locality": "San Cristóbal",
-        "score": "100"
+        "score": 100
       },
       {
         "locality": "Ciudad Bolivar",
-        "score": "40"
+        "score": 40
       },
 
       {
         "locality": "Antonio Narino",
-        "score": "720"
+        "score": 720
       },
       {
         "locality": "Suba",
-        "score": "630"
+        "score": 630
       },
       {
         "locality": "La Candelaria",
-        "score": "1000"
+        "score": 1000
       },
       {
         "locality": "Puente Aranda",
-        "score": "800"
+        "score": 800
       }
     ]
 
