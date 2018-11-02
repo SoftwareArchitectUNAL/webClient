@@ -23,7 +23,7 @@ class Mapa extends Component {
         this.state.allScore.map((sco,i) =>{
 
           arr.push(sco.locality)
-          arr.push(sco.score)
+          arr.push(sco.value)
           scoLoc.push(arr)
           arr=[]
           console.log(sco.locality)
