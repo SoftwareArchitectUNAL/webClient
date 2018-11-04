@@ -28,7 +28,7 @@ const Murder = () => (
             <div className="col-md-3">
               <div className="card mt-5">
                 <div className="card-header">
-                  <h4>{intra.neighborhood}</h4>
+                  <h4>{intra.locality}</h4>
                 </div>
 
                 <div className="card-body">
