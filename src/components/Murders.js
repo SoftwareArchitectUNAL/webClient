@@ -7,7 +7,7 @@ import gql from "graphql-tag";
 const getMurders = gql`
   {
     allMurders{
-    	neighborhood
+    	locality
       body_count
       description
     }
@@ -27,7 +27,7 @@ const Murder = () => (
             <div className="col-md-3">
               <div className="card mt-5">
                 <div className="card-header">
-                  <h4>{mur.neighborhood}</h4>
+                  <h4>{mur.locality}</h4>
                 </div>
 
                 <div className="card-body">

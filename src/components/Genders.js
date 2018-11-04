@@ -7,7 +7,7 @@ import gql from "graphql-tag";
 const getGenders= gql`
 {
     allGenders{
-   neighborhood
+   locality
     gtype
     criminal_complaint
     body_count
@@ -28,11 +28,12 @@ const Murder = () => (
             <div className="col-md-3">
               <div className="card mt-5">
                 <div className="card-header">
-                  <h4>{gen.neighborhood}</h4>
+                  <h4>{gen.locality}</h4>
                 </div>
 
                 <div className="card-body">
                   <p> <mark>Tipo de genero: </mark> {gen.gtype}</p>
+                  <p> <mark>Asesinatos: </mark>  { gen.body_count}</p>
                   <p>{gen.criminal_complaint}</p>
                 </div>
               </div>

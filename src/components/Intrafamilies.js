@@ -7,7 +7,7 @@ import gql from "graphql-tag";
 const getIntrafamilies = gql`
   {
     allIntrafamilies{
-    neighborhood
+    locality
       victim
      aggressor
     	criminal_complaint
