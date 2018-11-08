@@ -72,7 +72,7 @@ class entities extends Component {
                     </nav>
                 </div>
                 <div className="row">
-          
+
                     <div className="col-sm-4">
                         <div className="float-center col-sm">
                             <label htmlFor="select1" className="text-black" > Filtrar por Zona </label>
@@ -107,14 +107,17 @@ class entities extends Component {
 
 
                     <div className="container col-md-4 mx-auto">
+
                       {this.state.value==="show" &&
                           <div className="row  ">
+                            <div className=" btn-group-vertical mx-auto mb-5">
+                                <button onClick={this.onChangeCreate.bind(this)} type="button" className="btn btn-primary btn-sm" value="close">Cerrar</button>
+                            </div>
+
                             <div className="mx-auto">
                                <Entity/>
                             </div>
-                            <div className=" btn-group-vertical">
-                                <button onClick={this.onChangeCreate.bind(this)} type="button" className="btn btn-primary btn-sm" value="close">Cerrar</button>
-                            </div>
+
                           </div> }
 
                         {this.state.value==="close" &&
@@ -131,7 +134,7 @@ class entities extends Component {
 
                     </div>
 
-                
+
 
 
 
@@ -140,7 +143,7 @@ class entities extends Component {
                             zoom={this.state.zoom}
                              center={this.state.center}
                              points={this.state.points}
-                              
+
                         /> */}
                     {this.state.map==="allM" &&   <MapT zoom={this.state.zoom}
                              center={this.state.center}

@@ -118,7 +118,7 @@ class createEntity extends Component {
 
 
                 <br />
-                <div>
+                <div className="mx-auto">
                   <button type="submit"> Crear  </button>
                 </div>
               </form>
