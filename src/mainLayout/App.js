@@ -7,7 +7,7 @@ import PageGraph from '../pages/PageGraph';
 import PageDenounce   from '../pages/PageDenounce';
 import PageLivingcost from '../pages/PageLivingcost';
 import PageViolence from '../pages/PageViolence';
-
+import PageEntities from '../pages/PageEntities';
 
 
 class App extends Component {
@@ -20,6 +20,7 @@ class App extends Component {
                 <Route path="/denounce" component={PageDenounce} />
                 <Route path="/violence" component={PageViolence} />
                 <Route path="/livingcost" component={PageLivingcost} />
+                <Route path="/entities" component={PageEntities} />
                 <Footer />
             </div>
         );

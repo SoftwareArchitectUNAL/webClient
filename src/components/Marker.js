@@ -4,7 +4,7 @@ class Marker extends Component {
   render() {
     return(
       <a href="#" data-toggle="tooltip" title={this.props.name}>
-        <div className="pointer" onClick={(e) => this.props.handleOpenModal(this.props.id, this.props.modal, this.props.latitude, this.props.longitude, e)}>
+        <div className="pointer" onClick={(e) => this.props.handleOpenModal(this.props.id, this.props.modal, this.props.lat, this.props.lng, e)}>
           <img
             src={this.props.image}
           />
