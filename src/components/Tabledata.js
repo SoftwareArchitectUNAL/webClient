@@ -18,7 +18,7 @@ class Table extends Component{
 
       <BootstrapTable data={ allScore } bordered={ false } >
         <TableHeaderColumn dataField='locality' isKey> Localidad </TableHeaderColumn>
-        <TableHeaderColumn dataField='score'  dataSort={ true }>Puntaje </TableHeaderColumn>
+        <TableHeaderColumn dataField='value'  dataSort={ true }>Puntaje </TableHeaderColumn>
 
       </BootstrapTable>
     );
