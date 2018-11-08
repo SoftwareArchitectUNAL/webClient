@@ -68,12 +68,7 @@ class mapi extends Component {
 
       </div>
 
-            <Map
-              zoom={this.state.zoom}
-              center={this.state.center}
-              points={this.state.points}
-            />
-
+  
 
 
     </header>
