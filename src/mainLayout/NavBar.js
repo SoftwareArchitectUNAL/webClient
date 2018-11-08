@@ -31,7 +31,8 @@ class LinksCollapse extends Component {
       renderDenounce: !props.isAuthenticated,
       renderLivingcost: !props.isAuthenticated,
       renderLogout: props.isAuthenticated,
-      renderViolence:  !props.isAuthenticated
+      renderViolence:  !props.isAuthenticated,
+      renderEntites:  !props.isAuthenticated
 
     }
   }
@@ -56,6 +57,9 @@ class LinksCollapse extends Component {
           </li>
           <li className="nav-item mx-0 mx-lg-1">
             <NavBarLink render={this.state.renderLogout} onClick={this.props.onLogout} className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" to="/" value="Logout" />
+          </li>
+          <li className="nav-item mx-0 mx-lg-1">
+            <NavBarLink render={this.state.renderEntites} onClick={this.props.onLogout} className="nav-link py-3 px-0 px-lg-3 rounded js-scroll-trigger" value="entidades" to="/entities" />
           </li>
         </ul>
       </div>
