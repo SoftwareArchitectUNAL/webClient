@@ -37,49 +37,47 @@ class Formulario extends Component {
     }
 
 
-      var auth = `mutation {
-      createSession(auth:{ auth:{
-        email: "${id}",
-        password: "${pass}"
-      }
-      }) {
-        jwt
-      }
-    }`
-
+    var auth2 = `mutation {
+    auth(auth:{
+      email: "${id}",
+      password: "${pass}"
+    }) {
+      answer
+    }
+  }`
 
 
     GlRequest(
-      auth,
+      auth2,
       (data) => {
-        if (data && data.createSession) {
-            console.log("tu token es :   " +data.createSession.jwt)
-            this.props.onSubmit(data.createSession.jwt);        }
-
-      },
-      (error) => {
-        var auth2 = `mutation {
-        auth(auth:{
-          email: "${id}",
-          password: "${pass}"
-        }) {
-          answer
+        console.log(data.auth.answer)
+        if (data.auth.answer == 0) {
+          this.state.id = '';
+          alert("Ud no esta en la base de datos")
         }
-      }`
+        else if (data.auth.answer == 2) {
+          this.state.id= '';
+          alert("Lo sentimos, ud no esta en el LDAP")
+        }
 
+        else if (data.auth.answer == 1){
+
+          var auth = `mutation {
+          createSession(auth:{ auth:{
+            email: "${id}",
+            password: "${pass}"
+          }
+          }) {
+            jwt
+          }
+        }`
 
         GlRequest(
-          auth2,
+          auth,
           (data) => {
-            console.log(data.auth.answer)
-            if (data.auth.answer == 0) {
-              this.state.id = '';
-              alert("Ud no esta en la base de datos")
-            }
-            else if (data.auth.answer == 2) {
-              this.state.id= '';
-              alert("Lo sentimos, ud no esta en el LDAP")
-            }
+            if (data && data.createSession) {
+                console.log("tu token es :   " +data.createSession.jwt)
+                this.props.onSubmit(data.createSession.jwt);        }
 
           },
           (error) => {
@@ -90,11 +88,24 @@ class Formulario extends Component {
               })
               this.setState({ passError: errors })
             }
+
           }
         );
+
+        }
+
+      },
+      (error) => {
+        if(Array.isArray(error)){
+          let errors = []
+          error.forEach((e) => {
+            errors.push(`${e.message}`)
+          })
+          this.setState({ passError: errors })
+        }
+
       }
     );
-
 
 
 
