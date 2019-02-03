@@ -8,7 +8,7 @@ import { ApolloProvider } from "react-apollo";
 
 
 const client = new ApolloClient({
-  uri: 'http://35.231.160.199/graphql'
+  uri: 'http://35.237.0.211/graphql'
 });
 
 
