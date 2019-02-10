@@ -13,6 +13,7 @@ const client = new ApolloClient({
 
 
 
+
 class Violence extends Component {
 
   constructor() {
